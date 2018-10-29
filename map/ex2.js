@@ -42,8 +42,19 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
-}
+const getFoodCategories = (foods) => {
+
+  let tab1 = foods.map( x => { 
+    if( x.isVegetarian === true) {
+    return `${x.food} is suitable for vegetarians`
+  }else {
+    return `${x.food} is not suitable for vegetarians`
+  }
+ })
+ return tab1;
+};
+  
+
 
 
 

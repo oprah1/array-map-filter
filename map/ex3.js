@@ -59,8 +59,22 @@ En sortie:
 
  */
 
-function getMoviesFreshness(movies) {
-}
+const getMoviesFreshness = (movies)=> {
+
+  let mov = movies.map( x => {
+    if (x.rating < 60 ){
+      x.label = "rotten"
+    }else if (x.rating >= 60 && x.rating <= 75 ){
+      x.label = "fresh"
+    }else {
+      x.label = "certified fresh"
+    }
+      return x
+    }
+  )
+   return mov
+  }
+
 
 
 

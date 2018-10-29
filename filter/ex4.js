@@ -28,8 +28,16 @@ Sortie attendue:
   ]
  */
 
-function filterOnPrice(products, maxPrice) {
+
+filterOnPrice = (products, maxPrice) => {
+  const prime = products.filter(x => {
+      if (x.price <= maxPrice){
+          return x;
+      }
+  })
+  return prime;
 }
+
 
 // Ne pas modifier l'export
 module.exports = filterOnPrice;

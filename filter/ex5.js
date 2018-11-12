@@ -40,30 +40,26 @@ Exemple d'entrée:
 
 searchWordFilter = (items, search) => {
   let mot = items.filter(x => {
-    if (x.toLowerCase().includes(search)){
+    if (x.toLowerCase().includes(search)) {
       return x;
     }
-    return mot;
-  })
-  
-}
+  });
+  return mot;
+};
 
-const items = 
-[
-    'Mad Max: Fury Road',
-    'Interstellar',
-    'Revenge of the Nerds',
-    'Revenge of the Pink Panther',
-    'Star Wars: Episode I - The Phantom Menace',
-    'Star Wars: Episode II - Attack of the Clones',
-    'Star Wars: Episode III - Revenge of the Sith'
-  ]
+const items = [
+  "Mad Max: Fury Road",
+  "Interstellar",
+  "Revenge of the Nerds",
+  "Revenge of the Pink Panther",
+  "Star Wars: Episode I - The Phantom Menace",
+  "Star Wars: Episode II - Attack of the Clones",
+  "Star Wars: Episode III - Revenge of the Sith"
+];
 
-const search = 'Revenge';
+const search = "Revenge";
 
 console.log(searchWordFilter(items, search));
-
-
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;
